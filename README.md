@@ -1,9 +1,3 @@
-# 🏥 Insurance Charges Prediction with Neural Network
-
-> A systematic neural network regression study for predicting individual medical insurance charges. Eight hyperparameter tuning techniques are compared — batch size, dropout, batch normalization, early stopping, L1/L2 regularization, learning rate, and optimizer — using TensorFlow/Keras. Final model achieves **R² = 0.86** on the held-out test set.
-
----
-
 ## 📌 Project Overview
 
 This project builds and systematically improves a feedforward neural network to predict medical insurance charges from patient demographic and clinical data.
@@ -41,17 +35,6 @@ Starting from a full-batch baseline (R² = 0.23), the project progresses through
 | Optimizer | Adam | 0.8238 |
 
 ---
-
-## 🗂️ Project Structure
-
-```
-├── Insurance_Charges_Prediction_with_Neural_Network.ipynb   # Full experiment notebook
-├── requirements.txt                                          # Python dependencies
-└── README.md                                                 # Project documentation
-```
-
----
-
 ## 🔬 Notebook Structure
 
 The notebook is organized into 8 sections:
@@ -166,62 +149,6 @@ SGD diverges completely (NaN loss) without adaptive scaling. Adam marginally out
 
 ---
 
-## ⚙️ Installation & Setup
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/insurance-charges-neural-network.git
-cd insurance-charges-neural-network
-```
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Download the dataset
-
-The notebook handles download automatically via `kagglehub`. You will need a free Kaggle account.
-
-```python
-import kagglehub
-path = kagglehub.dataset_download("mirichoi0218/insurance")
-```
-
-Alternatively, download `insurance.csv` manually from [Kaggle](https://www.kaggle.com/datasets/mirichoi0218/insurance) and place it in the project root.
-
-### 4. Run the notebook
-
-```bash
-jupyter notebook Insurance_Charges_Prediction_with_Neural_Network.ipynb
-```
-
-Run all cells in order. Each section is self-contained and builds on the previous one.
-
----
-
-## 📦 Requirements
-
-```
-numpy
-pandas
-matplotlib
-scikit-learn
-tensorflow>=2.10
-kagglehub
-jupyter
-```
-
-Install all at once:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
 ## 🔑 Key Findings
 
 - **Batch size matters more than batch normalization** — switching from full-batch (bs=936) to mini-batch (bs=32) raised R² from 0.23 to 0.83, a far larger gain than any individual technique
@@ -244,24 +171,7 @@ pip install -r requirements.txt
 
 ---
 
-## 👤 Author
-
-**Bassem Mohammed**  
-Course: INFO-6151 — Data Visualization  
-Institution: Fanshawe College  
-Term: Winter 2026
-
----
-
-## 📄 License
-
-This project is for educational purposes as part of the Fanshawe College program.  
-Dataset license: [CC0: Public Domain](https://www.kaggle.com/datasets/mirichoi0218/insurance)
-
----
 
 ## 🙏 Acknowledgements
 
 - Dataset: [mirichoi0218 — Medical Cost Personal Dataset (Kaggle)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
-- Framework: [TensorFlow / Keras](https://www.tensorflow.org/)
-- Libraries: scikit-learn, pandas, numpy, matplotlib
